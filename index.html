@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="public/css/stylesheet.css">
+
+	<title>Unix Timestamp Converter</title>
+	<script type="text/javascript" src="public/analytics.js"></script>
+</head>
+
+<body>
+	<div class=container>
+		<h1 class="lead">Unix Timestamp Converter</h1>
+		<form id="convertDateForm" class="form-inline">
+			<div id="unixTimeInput" class="form-group">
+				<h6>Press "Convert" for the current time to be converted</h6>
+				<input type="number" class="form-control" placeholder="Unix Timestamp eg:" min="-999999999999" max="999999999999" name="number"
+				 id="unixTimestampInput">
+			</div>
+			<h5>or enter a date in any format</h5>
+			<div class="form-group" id="humanReadableDate">
+				<input class="form-control" name="fulldate" type="text/number" id="fulldate" placeholder="eg: 01/01/1970 12:30 pm">
+			</div>
+			<div id="buttonGroup">
+				<p>
+					<button id="submit" type="submit" class="btn btn-primary" style="vertical-align: top;">Convert</button>
+					<button id="reset" type="reset" class="btn btn-warning">Reset</button>
+				</p>
+			</div>
+		</form>
+		<p><strong><span id="yourTz">Your Timezone: </span></strong><span class="cleanDate">Date will display here</span></p>
+		<p><strong>UTC: </strong><span class="cleanDateUtc">Date will display here</span></p>
+		<p><strong>Unix: </strong><span class="convertedDateUnix">Timestamp will display here</span></p>
+	</div>
+
+	<script type="text/javascript" src="public/bundle.js"></script>
+
+</body>
+
+</html>
